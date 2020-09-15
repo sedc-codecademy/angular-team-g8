@@ -13,6 +13,11 @@ const routes: Routes = [
         (shipping) => shipping.ShippingModule
       ),
   },
+  {
+    path: "users",
+    loadChildren: () =>
+      import("./modules/users/users.module").then((users) => users.UsersModule),
+  },
 ];
 
 @NgModule({

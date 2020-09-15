@@ -4,7 +4,7 @@ import { ShippingOutletComponent } from './shipping-outlet.component';
 
 const routes:Routes = [
   { 
-    path: 'shipping',
+    path: '',
     component: ShippingOutletComponent,
     children: []
   }
