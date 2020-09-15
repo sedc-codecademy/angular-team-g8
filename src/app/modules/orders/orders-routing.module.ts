@@ -7,7 +7,7 @@ import { OrdersWrapperComponent } from './orders-wrapper.component';
 
 const routes: Routes = [
   {
-    path: 'orders',
+    path: '',
     component: OrdersWrapperComponent,
     children: [
       {path: '', component: AllOrdersComponent},

@@ -1,9 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
-import { AppRoutingModule } from "./app-routing.module";
-import { Router } from "@angular/router";
-import { AppComponent } from "./app.component";
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { HeaderComponent } from "./components/header/header.component";
 
 @NgModule({
@@ -12,6 +10,4 @@ import { HeaderComponent } from "./components/header/header.component";
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-  constructor(private router: Router) {}
-}
+export class AppModule {}
