@@ -6,13 +6,9 @@ const routes: Routes = [
   //{path: 'products', loadChildren: () => {}},
   //{path: 'login', component: ''},
   //{path: 'register', component: ''},
-  {
-    path: "shipping",
-    loadChildren: () =>
-      import("./modules/shipping/shipping.module").then(
-        (shipping) => shipping.ShippingModule
-      ),
-  },
+
+  { path: 'orders', loadChildren: () => import('./modules/orders/orders.module').then(orders => orders.OrdersModule) },
+  { path: 'shipping', loadChildren: () => import('./modules/shipping/shipping.module').then(shipping => shipping.ShippingModule) },
   {
     path: "users",
     loadChildren: () =>
