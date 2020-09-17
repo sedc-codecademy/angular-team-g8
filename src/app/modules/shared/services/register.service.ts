@@ -15,16 +15,6 @@ export class RegisterService {
   registerUser(user: iUser) {
     return this._http.post(`${environment.baseUrl}users`,
       user
-    ).subscribe(
-      (val) => {
-        console.log("POST call successful value returned in body",
-          val);
-      },
-      response => {
-        console.log("POST call in error", response);
-      },
-      () => {
-        console.log("The POST observable is now completed.");
-      });
+    )
   }
 }
