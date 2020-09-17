@@ -13,4 +13,10 @@ export class AuthService {
       `${baseURL}users?email=${email}&password=${password}`
     );
   }
+
+  checkForUser(email: string){
+    return this._http.get(
+      `${baseURL}users?email=${email}`
+    );
+  }
 }
