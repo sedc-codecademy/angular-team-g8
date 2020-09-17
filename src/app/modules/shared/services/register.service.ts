@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { baseURL } from "src/environments/environment";
+import { environment } from "src/environments/environment";
 import { iUser } from '../../../interfaces/user.interface'
 
 @Injectable({
@@ -13,7 +13,7 @@ export class RegisterService {
   ) { }
 
   registerUser(user: iUser) {
-    return this._http.post(`${baseURL}users`,
+    return this._http.post(`${environment.baseUrl}users`,
       user
     ).subscribe(
       (val) => {

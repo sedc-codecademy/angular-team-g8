@@ -16,7 +16,7 @@ export class AuthService {
   
   checkForUser(email: string){
     return this._http.get(
-      `${baseURL}users?email=${email}`
+      `${environment.baseUrl}users?email=${email}`
     );
   }
   
