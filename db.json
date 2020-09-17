@@ -17,6 +17,26 @@
         "user"
       ],
       "active": true
+    },
+    {
+      "id": "80b01358-c536-4d2f-8704-becc5336cfb7",
+      "name": "Lol",
+      "email": "teste@test.com",
+      "password": "lolski",
+      "role": [
+        "user"
+      ],
+      "active": true
+    },
+    {
+      "id": "b2db845d-c098-4541-90f8-fcd9b6a5ec98",
+      "name": "Jogn",
+      "email": "jogski@mail.com",
+      "password": "qwe",
+      "role": [
+        "user"
+      ],
+      "active": true
     }
   ],
   "products": [],
