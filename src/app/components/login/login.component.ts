@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.profileForm.value;
     this._auth.loginWithEmail(email, password).subscribe((user: iUser) => {
       if (user) {
+        this._auth.isLoggedIn.next(true);
         localStorage.setItem('loggedUser', user[0].email);
         this._router.navigate(['dashboard']);
       }

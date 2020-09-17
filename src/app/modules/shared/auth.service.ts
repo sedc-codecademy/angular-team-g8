@@ -12,13 +12,9 @@ export class AuthService {
   public isLoggedIn = new BehaviorSubject<boolean>(false);
 
   loginWithEmail(email: string, password: string) {
-    const user = this._http.get(
+    return this._http.get(
       `${environment.baseUrl}users?email=${email}&password=${password}`
     );
-    if (user) {
-      this.isLoggedIn.next(true);
-      return user;
-    }
   }
 
   logout() {
