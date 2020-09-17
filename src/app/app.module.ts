@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     LoginComponent,
     FooterComponent,
     LandingPageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

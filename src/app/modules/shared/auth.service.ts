@@ -13,7 +13,13 @@ export class AuthService {
       `${environment.baseUrl}users?email=${email}&password=${password}`
     );
   }
-
+  
+  checkForUser(email: string){
+    return this._http.get(
+      `${environment.baseUrl}users?email=${email}`
+    );
+  }
+  
   isLoggedIn(): boolean {
     const logged = localStorage.getItem('loggedUser');
     if (logged) {
