@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { baseURL } from "src/environments/environment";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { baseURL } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class AuthService {
   constructor(private _http: HttpClient) {}
@@ -12,5 +12,14 @@ export class AuthService {
     return this._http.get(
       `${baseURL}users?email=${email}&password=${password}`
     );
+  }
+
+  isLoggedIn(): boolean {
+    const logged = localStorage.getItem('loggedUser');
+    if (logged) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
