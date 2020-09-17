@@ -1,0 +1,39 @@
+
+.navbar-left {
+  background-color: rgb(105, 114, 121);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  width: 90%;
+  border-radius: 10px;
+}
+
+li {
+  list-style: none;
+  border-bottom: solid 1px rgb(105, 114, 121);
+}
+
+a {
+  color: black;
+}
+
+h3 {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 35vh;
+}
+
+ul, h3 {
+    margin:auto;
+
+}
