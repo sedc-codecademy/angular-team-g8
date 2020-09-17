@@ -1,5 +1,14 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": 1,
+      "name": "test user",
+      "email": "test@test.com",
+      "password": "Qwerty1$",
+      "role": [],
+      "active": false
+    }
+  ],
   "products": [],
   "orders": [],
   "invoices": [],
