@@ -28,36 +28,6 @@ const routes: Routes = [
       ),
   },
 
-  {
-    path: 'orders',
-    loadChildren: () =>
-      import('./modules/orders/orders.module').then(
-        (orders) => orders.OrdersModule
-      ),
-    canActivate: [AuthGuardGuard],
-  },
-  {
-    path: 'shipping',
-    loadChildren: () =>
-      import('./modules/shipping/shipping.module').then(
-        (shipping) => shipping.ShippingModule
-      ),
-    canActivate: [AuthGuardGuard],
-  },
-  {
-    path: 'users',
-    loadChildren: () =>
-      import('./modules/users/users.module').then((users) => users.UsersModule),
-    canActivate: [AuthGuardGuard],
-  },
-  {
-    path: 'invoices',
-    loadChildren: () =>
-      import('./modules/invoices/invoices.module').then(
-        (invoices) => invoices.InvoicesModule
-      ),
-    canActivate: [AuthGuardGuard],
-  },
 ];
 
 @NgModule({
