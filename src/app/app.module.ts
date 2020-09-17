@@ -19,7 +19,7 @@ import { RegisterComponent } from './components/register/register.component';
     LoginComponent,
     FooterComponent,
     LandingPageComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

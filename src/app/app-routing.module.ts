@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AuthGuardGuard } from './services/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       import('./modules/dashboard/dashboard.module').then(
         (dashboard) => dashboard.DashboardModule
       ),
+    canActivate: [AuthGuardGuard],
   },
   {
     path: 'products',
@@ -26,36 +28,10 @@ const routes: Routes = [
       ),
   },
 
-  {
-    path: 'orders',
-    loadChildren: () =>
-      import('./modules/orders/orders.module').then(
-        (orders) => orders.OrdersModule
-      ),
-  },
-  {
-    path: 'shipping',
-    loadChildren: () =>
-      import('./modules/shipping/shipping.module').then(
-        (shipping) => shipping.ShippingModule
-      ),
-  },
-  {
-    path: 'users',
-    loadChildren: () =>
-      import('./modules/users/users.module').then((users) => users.UsersModule),
-  },
-  {
-    path: 'invoices',
-    loadChildren: () =>
-      import('./modules/invoices/invoices.module').then(
-        (invoices) => invoices.InvoicesModule
-      ),
-  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
