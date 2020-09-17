@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   constructor(private _http: HttpClient, private _router: Router) {}
+  
   public isLoggedIn = new BehaviorSubject<boolean>(false);
 
   loginWithEmail(email: string, password: string) {
