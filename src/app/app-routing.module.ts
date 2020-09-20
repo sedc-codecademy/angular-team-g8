@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuardGuard } from './services/auth-guard.guard';
+import { RoleGuard } from './services/role.guard';
 
 const routes: Routes = [
   {
@@ -27,7 +28,6 @@ const routes: Routes = [
         (products) => products.ProductsModule
       ),
   },
-
 ];
 
 @NgModule({

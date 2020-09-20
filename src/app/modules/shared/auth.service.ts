@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, from } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   constructor(private _http: HttpClient, private _router: Router) {}
-  
+
   public isLoggedIn = new BehaviorSubject<boolean>(false);
 
   loginWithEmail(email: string, password: string) {
