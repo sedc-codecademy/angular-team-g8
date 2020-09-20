@@ -5,17 +5,15 @@
       "name": "test user",
       "email": "test@test.com",
       "password": "Qwerty1$",
-      "role": [],
+      "role": ["user", "admin"],
       "active": false
     },
     {
       "id": "eb7339bc-d1e9-47dd-ba59-569357d2f2ab",
       "name": "Bob",
       "email": "bobski@mail.com",
-      "password": "qwe",
-      "role": [
-        "user"
-      ],
+      "password": "Qwerty1$",
+      "role": ["user"],
       "active": true
     },
     {
@@ -23,9 +21,7 @@
       "name": "Lol",
       "email": "teste@test.com",
       "password": "lolski",
-      "role": [
-        "user"
-      ],
+      "role": ["user"],
       "active": true
     },
     {
@@ -33,9 +29,7 @@
       "name": "Jogn",
       "email": "jogski@mail.com",
       "password": "qwe",
-      "role": [
-        "user"
-      ],
+      "role": ["user"],
       "active": true
     }
   ],

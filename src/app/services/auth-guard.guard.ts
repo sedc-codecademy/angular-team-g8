@@ -3,7 +3,6 @@ import {
   CanActivate,
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
-  UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../modules/shared/auth.service';
@@ -13,14 +12,8 @@ import { AuthService } from '../modules/shared/auth.service';
 })
 export class AuthGuardGuard implements CanActivate {
   constructor(private auth: AuthService) {}
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ):
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree>
-    | boolean
-    | UrlTree {
-    return this.auth.isLoggedIn.toPromise();
+  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    // onsole.log(next.routeConfig.path); -- using this to track routes in development
+    return this.auth.isLoggedIn.getValue();
   }
 }
