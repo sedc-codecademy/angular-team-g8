@@ -4,35 +4,45 @@
       "id": 1,
       "name": "test user",
       "email": "test@test.com",
-      "password": "Qwerty1$",
-      "role": ["user", "admin"],
+      "password": "qwe",
+      "role": [
+        "user",
+        "admin"
+      ],
       "active": false
     },
     {
       "id": "eb7339bc-d1e9-47dd-ba59-569357d2f2ab",
-      "name": "Bob",
-      "email": "bobski@mail.com",
+      "name": "Acee",
       "password": "Qwerty1$",
-      "role": ["user"],
+      "email": "bobski@mail.com",
+      "role": [
+        "user"
+      ],
       "active": true
     },
     {
-      "id": "80b01358-c536-4d2f-8704-becc5336cfb7",
-      "name": "Lol",
-      "email": "teste@test.com",
-      "password": "lolski",
-      "role": ["user"],
-      "active": true
-    },
-    {
-      "id": "b2db845d-c098-4541-90f8-fcd9b6a5ec98",
-      "name": "Jogn",
-      "email": "jogski@mail.com",
+      "id": "b78f9488-2277-48d4-a0f3-f39f09ba976d",
+      "name": "Foq",
       "password": "qwe",
-      "role": ["user"],
+      "email": "foo@mail.com",
+      "role": [
+        "user"
+      ],
+      "active": true
+    },
+    {
+      "id": "3b22efb1-a308-4037-b69a-76ca1d280fd8",
+      "name": "Toni",
+      "email": "toni@mail.com",
+      "password": "toni",
+      "role": [
+        "user"
+      ],
       "active": true
     }
   ],
+
   "products": [
     {
       "id": 1,
@@ -72,3 +82,4 @@
     }
   ]
 }
+

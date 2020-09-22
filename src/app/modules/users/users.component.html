@@ -1,2 +1,96 @@
-<p>Users Work! or not :)</p>
+<div class="container">
+    <div class="row">
+
+        <!-- Print all users -->
+
+        <div class="col-3">
+            <li class="custom-pointer list-group-item list-group-item-primary" (click)="toggleShow()">Add User</li>
+            <ul class="list-group" *ngFor="let user of allUsers">
+                <li (click)="getSingleUser(user.id)" class="custom-pointer list-group-item list-group-item-light">{{user.name}}</li>
+            </ul>
+        </div>
+
+        <!-- Print Info for single user -->
+
+
+
+        <ng-container *ngIf="singleUser">
+
+            <div class="col-8" *ngIf="isShown2">
+                <div class="card form-row">
+                    <div>
+                        <h5 class="card-header">{{singleUser[0].name}}
+                            <a>
+                                <span (click)="deleteUser(singleUser[0].id)"
+                                    class="custom-pointer badge badge-pill badge-danger">Delete
+                                </span>
+                            </a>
+                        </h5>
+                    </div>
+
+                    <!-- Edit User Panel -->
+
+                    <div class="card-body">
+
+                        <div class="form-group col-md-6">
+                            <label>Email</label>
+                            <input type="email" name="mail" class="form-control" value="{{email}}"
+                                [(ngModel)]="email" />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label>First name</label>
+                            <input type="text" name="fname" class="form-control" value="{{name}}"
+                                [(ngModel)]="firstname" />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label>Password</label>
+                            <input type="password" name="pass" class="form-control" value="{{password}}"
+                                [(ngModel)]="password" />
+                        </div>
+
+                        <a (click)="editSingleUser(singleUser[0].id)" class="btn btn-primary">Save</a>
+                    </div>
+                </div>
+            </div>
+
+        </ng-container>
+
+        <!-- Add User Component  -->
+
+        <ng-container>
+            <div class="col-8" *ngIf="isShown">
+                <div class="card form-row">
+                    <div>
+                        <h5 class="card-header">Add new user</h5>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="form-group col-md-6">
+                            <label>Email</label>
+                            <input type="email" name="mail" class="form-control" [(ngModel)]="email" />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label>First name</label>
+                            <input type="text" name="fname" class="form-control" [(ngModel)]="firstname" />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label>Password</label>
+                            <input type="password" name="pass" class="form-control" [(ngModel)]="password" />
+                        </div>
+
+                        <a class="btn btn-primary" (click)="addUser()">Add New User</a>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+
+    </div>
+</div>
+
 <router-outlet></router-outlet>

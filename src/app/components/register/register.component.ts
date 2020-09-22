@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
       }
     ).subscribe(
       (val) => {
-        this._router.navigate(['dashboard'])
+        this._router.navigate(['login'])
       },
       response => {
         console.log("POST call in error", response);
