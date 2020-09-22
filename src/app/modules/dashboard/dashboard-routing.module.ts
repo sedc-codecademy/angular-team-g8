@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuardGuard } from 'src/app/services/auth-guard.guard';
+import { RoleGuard } from '../../services/role.guard';
 import { DashboardComponent } from './dashboard.component';
 
 const dashboardRoutes: Routes = [
@@ -14,7 +15,7 @@ const dashboardRoutes: Routes = [
           import('../../modules/users/users.module').then(
             (users) => users.UsersModule
           ),
-        canActivate: [AuthGuardGuard]
+        canActivate: [AuthGuardGuard, RoleGuard],
       },
       {
         path: 'orders',
@@ -22,7 +23,7 @@ const dashboardRoutes: Routes = [
           import('../../modules/orders/orders.module').then(
             (order) => order.OrdersModule
           ),
-        canActivate: [AuthGuardGuard]
+        canActivate: [AuthGuardGuard],
       },
       {
         path: 'invoices',
@@ -30,7 +31,7 @@ const dashboardRoutes: Routes = [
           import('../../modules/invoices/invoices.module').then(
             (invoice) => invoice.InvoicesModule
           ),
-        canActivate: [AuthGuardGuard]
+        canActivate: [AuthGuardGuard, RoleGuard],
       },
       {
         path: 'shipping',
@@ -38,7 +39,7 @@ const dashboardRoutes: Routes = [
           import('../../modules/shipping/shipping.module').then(
             (shipping) => shipping.ShippingModule
           ),
-        canActivate: [AuthGuardGuard]
+        canActivate: [AuthGuardGuard, RoleGuard],
       },
       {
         path: 'products',
@@ -46,7 +47,7 @@ const dashboardRoutes: Routes = [
           import('../../modules/products/products.module').then(
             (products) => products.ProductsModule
           ),
-          canActivate: [AuthGuardGuard]
+        canActivate: [AuthGuardGuard, RoleGuard],
       },
       // {
       //   path: 'profile',
