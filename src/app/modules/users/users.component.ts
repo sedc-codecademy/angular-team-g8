@@ -18,7 +18,7 @@ export class UsersComponent implements OnInit {
 
   isShown: boolean = false;
   isShown2: boolean = false;
-  allUsers: iUser;
+  allUsers: iUser[];
   singleUser: iUser;
 
   id: any;
@@ -96,7 +96,7 @@ export class UsersComponent implements OnInit {
   //Get all users
 
   getUsers() {
-    this._getUsers.getAllUsers().subscribe((user: iUser) => {
+    this._getUsers.getAllUsers().subscribe((user: iUser[]) => {
       this.allUsers = user;
       console.log(this.allUsers);
     });
@@ -109,6 +109,7 @@ export class UsersComponent implements OnInit {
     this.isShown = false;
     this.isShown2 = true;
   
+    //this.singleUser = this._serviceForMapping.mapUser(this.allUsers.filter(user => user.id == id)[0]);
     this._getUsers.getSingleUser(id).subscribe((user: iUser) => {
       
       this.singleUser = user;
