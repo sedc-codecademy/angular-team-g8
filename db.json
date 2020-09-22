@@ -61,6 +61,33 @@
       "price": 0.99,
       "qty": 1,
       "shippingId": 1
+    },
+    {
+      "id": "9268eb57-4c3e-4fb7-99e1-d2833b6f42a3",
+      "name": "Custom product",
+      "description": "Blablabla",
+      "price": 10,
+      "qty": 1,
+      "imageUrl": "",
+      "shippingId": 1
+    },
+    {
+      "id": "7a8d42c0-b7eb-4a46-88f7-a72cb7012ca7",
+      "name": "Custom product",
+      "description": "Blablabla",
+      "price": 10,
+      "qty": 1,
+      "imageUrl": "",
+      "shippingId": 1
+    },
+    {
+      "id": "44a1adfe-f13f-4341-9590-0f1eb5e99ef6",
+      "name": "Custom product",
+      "description": "Blablabla",
+      "price": 10,
+      "qty": 1,
+      "imageUrl": "",
+      "shippingId": 1
     }
   ],
   "orders": [

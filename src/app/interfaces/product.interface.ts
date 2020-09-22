@@ -7,3 +7,10 @@ export interface Product {
   qty: number;
   shippingId: number;
 }
+
+export interface iProductState
+{
+  list: Product[];
+  error: any;
+  loading: boolean;
+}
