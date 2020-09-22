@@ -33,8 +33,42 @@
       "active": true
     }
   ],
-  "products": [],
-  "orders": [],
-  "invoices": [],
-  "shipping": []
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "description": "Goldspur Apple",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Jabuka_goldspur.jpg",
+      "price": 0.99,
+      "qty": 1,
+      "shippingId": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "products": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "description": "Goldspur Apple",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Jabuka_goldspur.jpg",
+          "price": 0.99,
+          "qty": 1,
+          "shippingId": 1
+        }
+      ],
+      "totalPrice": 0.99,
+      "status": "approved"
+    }
+  ],
+  "invoices": [{ "id": 1, "orderId": 1, "date": "2020-09-20", "total": 2.98 }],
+  "shipping": [
+    {
+      "id": 1,
+      "type": "CAR",
+      "cost": 1.99,
+      "company": "POST"
+    }
+  ]
 }
