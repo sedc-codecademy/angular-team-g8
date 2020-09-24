@@ -3,3 +3,53 @@
   <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
+<!-- 
+<input type="text" [(ngModel)]="user.firstname" /> -->
+
+<div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users$ | async">
+      <span>{{user.name}}</span>
+      <span>{{user.email}}</span>
+      <span>
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </span>
+    </li>
+  </ul>
+</div>
+
+<div >
+  <form #u="ngForm" (ngSubmit)="addNewUser(u)">
+    <div class="col-sm-12">
+      <legend>Name</legend>
+      <input type="text" name="name" ngModel required />
+    </div>
+    <div class="col-sm-12">
+      <legend>Email</legend>
+      <input type="email" name="email" ngModel required />
+    </div>
+    <div class="col-sm-12">
+      <legend>Password</legend>
+      <input type="password" name="password" ngModel required />
+    </div>
+
+    <div class="col-sm-12 mt-2 mb-2">
+      <button type="submit">Add</button>
+    </div>
+  </form>
+</div>
+
+<div>
+  <span *ngIf="productsLoad$ | async">
+    <div class="loader">Loading...</div>
+  </span>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let product of products$ | async">
+      <span>{{product.id}}</span>
+      <span>{{product.name}}</span>
+      <span>{{product.price}}</span>
+    </li>
+  </ul>
+
+  <button (click)="manuallyAddProduct()">Add my product</button>
+</div>

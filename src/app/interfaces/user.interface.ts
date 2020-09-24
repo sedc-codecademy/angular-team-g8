@@ -6,3 +6,10 @@ export interface iUser {
   role: string[];
   active: boolean;
 }
+
+
+export interface iUsersState
+{
+  list: iUser[],
+  error: any
+}
