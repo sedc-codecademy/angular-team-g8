@@ -13,3 +13,9 @@ export interface iOrder {
   totalPrice: number;
   status: eOrderStatus;
 }
+
+export interface iOrderState
+{
+  list: iOrder[],
+  error: any
+}

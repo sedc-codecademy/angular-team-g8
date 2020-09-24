@@ -11,6 +11,7 @@ import { v4 as uuid} from 'uuid';
 import { AddUserAction, DeleteUserAction, LoadUsersAction } from './store/actions/users.actions';
 import { Product } from './interfaces/product.interface';
 import { AddProductAction, LoadProductsAction, LoadProductsSuccessAction } from './store/actions/products.actions';
+import { LoadOrdersAction } from './modules/orders/store/orders.actions';
 
 @Component({
   selector: 'app-root',
@@ -37,16 +38,15 @@ export class AppComponent {
     //this._testS.getUsers().subscribe((data) => {console.log(data)})
     //console.log(this._testS.postUser(this.user))
 
-   
-    this.store.dispatch(new LoadUsersAction([]));
-    this.store.dispatch(new LoadProductsAction());
+    // this.store.dispatch(new LoadUsersAction([]));
+    // this.store.dispatch(new LoadProductsAction());
 
-    this.productsLoad$ = this.store.select(store => store.products.loading);
-    this.productError$ = this.store.select(store => store.products.error);
-    this.products$ = this.store.select(store => store.products.list);
+    // this.productsLoad$ = this.store.select(store => store.products.loading);
+    // this.productError$ = this.store.select(store => store.products.error);
+    // this.products$ = this.store.select(store => store.products.list);
 
-    //selector for reading from Store
-    this.users$ = this.store.select(store => store.users.list);
+    // //selector for reading from Store
+    // this.users$ = this.store.select(store => store.users.list);
   }
 
   addNewUser(form:NgForm)
